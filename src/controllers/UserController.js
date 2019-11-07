@@ -18,9 +18,14 @@ module.exports = {
     //CADASTRAR
     async store(req, res) {
         
-        const user = await User.create(req.body);
-
+        const user = await User.create(req.body).then((sucess) => {
+            console.log("Cadastrado "+sucess)
+            
+        }).catch((err) => {
+            console.log("Erro "+err)
+        });
         return res.json(user);
+       
     },
 
     //ATUALIZAR
@@ -38,4 +43,6 @@ module.exports = {
         });
         return res.send();
     }
+
+    
 };

@@ -10,7 +10,7 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    conteudo: {
+    descricao: {
         type: String,
         required: false
     },

@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const PostSchema = new mongoose.Schema({
     autor: {
         type: String,
-        required: true
+        required: false
     },
     imagem: {
         type: String,
